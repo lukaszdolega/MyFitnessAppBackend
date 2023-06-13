@@ -1,24 +1,22 @@
-package com.myfitnessapp.training.controller;
+package com.myfitnessapp.admin.controller;
 
-
+import com.myfitnessapp.admin.model.AdminTraining;
+import com.myfitnessapp.admin.service.AdminTrainingService;
 import com.myfitnessapp.training.model.Training;
-import com.myfitnessapp.training.service.TrainingService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RestController
 @RequiredArgsConstructor
-public class TrainingController {
+public class AdminTrainingController {
 
-    private final TrainingService trainingService;
+    private final AdminTrainingService trainingService;
 
-    @GetMapping("/trainings")
-    public Page<Training> getTrainings(Pageable pageable) {
+    @GetMapping("/admin/trainings")
+    public Page<AdminTraining> getTrainings(Pageable pageable) {
         return trainingService.getTrainings(pageable);
     }
 }
