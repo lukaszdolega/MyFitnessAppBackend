@@ -1,5 +1,6 @@
 package com.myfitnessapp.training.service;
 
+import com.myfitnessapp.admin.model.AdminTraining;
 import com.myfitnessapp.training.model.Training;
 import com.myfitnessapp.training.repository.TrainingRepository;
 import lombok.RequiredArgsConstructor;
@@ -17,5 +18,9 @@ public class TrainingService {
 
     public Page<Training> getTrainings(Pageable pageable){
         return trainingRepository.findAll(pageable);
+    }
+
+    public Training createTraining(Training training) {
+        return trainingRepository.save(training);
     }
 }

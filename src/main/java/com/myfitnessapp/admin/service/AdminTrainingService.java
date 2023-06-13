@@ -1,5 +1,6 @@
 package com.myfitnessapp.admin.service;
 
+import com.myfitnessapp.admin.controller.dto.AdminTrainingDto;
 import com.myfitnessapp.admin.model.AdminTraining;
 import com.myfitnessapp.admin.repository.AdminTrainingRepository;
 import com.myfitnessapp.training.model.Training;
@@ -16,5 +17,17 @@ public class AdminTrainingService {
 
     public Page<AdminTraining> getTrainings(Pageable pageable){
         return trainingRepository.findAll(pageable);
+    }
+
+    public AdminTraining getTraining(Long id) {
+        return trainingRepository.findById(id).orElseThrow();
+    }
+
+    public AdminTraining updateTraining(AdminTraining training ) {
+        return trainingRepository.save(training);
+    }
+
+    public AdminTraining createTraining(AdminTraining training) {
+        return trainingRepository.save(training);
     }
 }
