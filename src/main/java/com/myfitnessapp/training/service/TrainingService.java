@@ -23,4 +23,8 @@ public class TrainingService {
     public Training createTraining(Training training) {
         return trainingRepository.save(training);
     }
+
+    public Training getTrainingBySlug(String slug) {
+        return trainingRepository.findBySlug(slug).orElseThrow();
+    }
 }

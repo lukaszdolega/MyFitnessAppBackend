@@ -1,5 +1,6 @@
 package com.myfitnessapp.admin.controller;
 
+import com.github.slugify.Slugify;
 import com.myfitnessapp.admin.controller.dto.AdminTrainingDto;
 import com.myfitnessapp.admin.model.AdminTraining;
 import com.myfitnessapp.admin.service.AdminTrainingService;
@@ -47,13 +48,20 @@ public class AdminTrainingController {
         trainingService.deleteTraining(id);
     }
 
-    private static AdminTraining mapAdminTraining(AdminTrainingDto adminTrainingDto, Long id) {
+    private AdminTraining mapAdminTraining(AdminTrainingDto adminTrainingDto, Long id) {
         return AdminTraining.builder()
                 .id(id)
                 .name(adminTrainingDto.getName())
                 .category(adminTrainingDto.getCategory())
                 .content(adminTrainingDto.getContent())
                 .level(adminTrainingDto.getLevel())
+                .slug(slugifySlug(adminTrainingDto.getSlug()))
                 .build();
+    }
+
+    private String slugifySlug(String slug) {
+        Slugify slugify = new Slugify();
+        return slugify.withCustomReplacement("_", "-")
+                .slugify(slug);
     }
 }

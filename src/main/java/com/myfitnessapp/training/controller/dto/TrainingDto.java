@@ -18,4 +18,7 @@ public class TrainingDto {
     @NotBlank
     @Length(min = 4)
     private String level;
+    @NotBlank
+    @Length(min = 4)
+    private String slug;
 }

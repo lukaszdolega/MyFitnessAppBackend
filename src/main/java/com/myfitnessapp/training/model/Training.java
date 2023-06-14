@@ -23,5 +23,6 @@ public class Training {
     private String category;
     private String content;
     private String level;
+    private String slug;
 
 }
