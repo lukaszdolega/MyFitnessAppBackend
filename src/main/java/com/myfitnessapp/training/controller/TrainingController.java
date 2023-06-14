@@ -6,6 +6,7 @@ import com.myfitnessapp.admin.model.AdminTraining;
 import com.myfitnessapp.training.controller.dto.TrainingDto;
 import com.myfitnessapp.training.model.Training;
 import com.myfitnessapp.training.service.TrainingService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -26,7 +27,7 @@ public class TrainingController {
     }
 
     @PostMapping("/trainings")
-    public Training createTraining(@RequestBody TrainingDto trainingDto) {
+    public Training createTraining(@RequestBody @Valid TrainingDto trainingDto) {
         return trainingService.createTraining(Training.builder()
                         .name(trainingDto.getName())
                         .category(trainingDto.getCategory())

@@ -3,6 +3,7 @@ package com.myfitnessapp.admin.controller;
 import com.myfitnessapp.admin.controller.dto.AdminTrainingDto;
 import com.myfitnessapp.admin.model.AdminTraining;
 import com.myfitnessapp.admin.service.AdminTrainingService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -31,12 +32,12 @@ public class AdminTrainingController {
     }
 
     @PostMapping("/admin/trainings")
-    public AdminTraining createTraining(@RequestBody AdminTrainingDto adminTrainingDto) {
+    public AdminTraining createTraining(@RequestBody @Valid AdminTrainingDto adminTrainingDto) {
         return trainingService.createTraining(mapAdminTraining(adminTrainingDto, EMPTY_ID));
     }
 
     @PutMapping("/admin/trainings/{id}")
-    public AdminTraining updateTraining(@RequestBody AdminTrainingDto adminTrainingDto, @PathVariable Long id){
+    public AdminTraining updateTraining(@RequestBody @Valid AdminTrainingDto adminTrainingDto, @PathVariable Long id){
         return trainingService.updateTraining(mapAdminTraining(adminTrainingDto, id));
     }
 
