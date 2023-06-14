@@ -30,4 +30,8 @@ public class AdminTrainingService {
     public AdminTraining createTraining(AdminTraining training) {
         return trainingRepository.save(training);
     }
+
+    public void deleteTraining(Long id) {
+        trainingRepository.deleteById(id);
+    }
 }

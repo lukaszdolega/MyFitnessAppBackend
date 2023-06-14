@@ -7,6 +7,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -39,6 +40,11 @@ public class AdminTrainingController {
     @PutMapping("/admin/trainings/{id}")
     public AdminTraining updateTraining(@RequestBody @Valid AdminTrainingDto adminTrainingDto, @PathVariable Long id){
         return trainingService.updateTraining(mapAdminTraining(adminTrainingDto, id));
+    }
+
+    @DeleteMapping("/admin/trainings/{id}")
+    public void deleteTraining(@PathVariable Long id){
+        trainingService.deleteTraining(id);
     }
 
     private static AdminTraining mapAdminTraining(AdminTrainingDto adminTrainingDto, Long id) {
