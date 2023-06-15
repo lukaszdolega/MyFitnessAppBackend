@@ -1,4 +1,4 @@
-package com.myfitnessapp.admin.model;
+package com.myfitnessapp.admin.category.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,20 +10,17 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-
 @Entity
+@Table(name = "category")
 @Getter
-@Table(name = "training")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AdminTraining {
+public class AdminCategory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String category;
-    private String content;
-    private String level;
+    private String description;
     private String slug;
 }

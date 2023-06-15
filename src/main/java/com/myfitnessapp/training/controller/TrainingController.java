@@ -1,8 +1,6 @@
 package com.myfitnessapp.training.controller;
 
 
-import com.myfitnessapp.admin.controller.dto.AdminTrainingDto;
-import com.myfitnessapp.admin.model.AdminTraining;
 import com.myfitnessapp.training.controller.dto.TrainingDto;
 import com.myfitnessapp.training.model.Training;
 import com.myfitnessapp.training.service.TrainingService;
@@ -35,7 +33,7 @@ public class TrainingController {
     public Training createTraining(@RequestBody @Valid TrainingDto trainingDto) {
         return trainingService.createTraining(Training.builder()
                         .name(trainingDto.getName())
-                        .category(trainingDto.getCategory())
+                        .categoryId(trainingDto.getCategoryId())
                         .content(trainingDto.getContent())
                         .level(trainingDto.getLevel())
                 .build());

@@ -1,5 +1,6 @@
-package com.myfitnessapp.admin.controller.dto;
+package com.myfitnessapp.admin.training.controller.dto;
 
+import jakarta.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
@@ -9,9 +10,8 @@ public class AdminTrainingDto {
     @NotBlank
     @Length(min = 4)
     private String name;
-    @NotBlank
-    @Length(min = 4)
-    private String category;
+    @NotNull
+    private Long categoryId;
     @NotBlank
     @Length(min = 4)
     private String content;

@@ -1,14 +1,11 @@
 package com.myfitnessapp.training.service;
 
-import com.myfitnessapp.admin.model.AdminTraining;
 import com.myfitnessapp.training.model.Training;
 import com.myfitnessapp.training.repository.TrainingRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor

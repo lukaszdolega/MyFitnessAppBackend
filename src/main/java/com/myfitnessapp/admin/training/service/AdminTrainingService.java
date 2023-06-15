@@ -1,9 +1,7 @@
-package com.myfitnessapp.admin.service;
+package com.myfitnessapp.admin.training.service;
 
-import com.myfitnessapp.admin.controller.dto.AdminTrainingDto;
-import com.myfitnessapp.admin.model.AdminTraining;
-import com.myfitnessapp.admin.repository.AdminTrainingRepository;
-import com.myfitnessapp.training.model.Training;
+import com.myfitnessapp.admin.training.model.AdminTraining;
+import com.myfitnessapp.admin.training.repository.AdminTrainingRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

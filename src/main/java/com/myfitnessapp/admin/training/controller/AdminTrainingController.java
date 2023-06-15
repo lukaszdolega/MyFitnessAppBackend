@@ -1,9 +1,9 @@
-package com.myfitnessapp.admin.controller;
+package com.myfitnessapp.admin.training.controller;
 
 import com.github.slugify.Slugify;
-import com.myfitnessapp.admin.controller.dto.AdminTrainingDto;
-import com.myfitnessapp.admin.model.AdminTraining;
-import com.myfitnessapp.admin.service.AdminTrainingService;
+import com.myfitnessapp.admin.training.controller.dto.AdminTrainingDto;
+import com.myfitnessapp.admin.training.model.AdminTraining;
+import com.myfitnessapp.admin.training.service.AdminTrainingService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -52,7 +52,7 @@ public class AdminTrainingController {
         return AdminTraining.builder()
                 .id(id)
                 .name(adminTrainingDto.getName())
-                .category(adminTrainingDto.getCategory())
+                .categoryId(adminTrainingDto.getCategoryId())
                 .content(adminTrainingDto.getContent())
                 .level(adminTrainingDto.getLevel())
                 .slug(slugifySlug(adminTrainingDto.getSlug()))

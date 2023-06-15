@@ -1,21 +1,23 @@
-package com.myfitnessapp.training.model;
-
+package com.myfitnessapp.admin.training.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+
 @Entity
 @Getter
-@AllArgsConstructor
-@NoArgsConstructor
+@Table(name = "training")
 @Builder
-public class Training {
+@NoArgsConstructor
+@AllArgsConstructor
+public class AdminTraining {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,5 +26,4 @@ public class Training {
     private String content;
     private String level;
     private String slug;
-
 }
