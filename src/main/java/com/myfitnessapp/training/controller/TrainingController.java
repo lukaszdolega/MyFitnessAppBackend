@@ -1,6 +1,7 @@
 package com.myfitnessapp.training.controller;
 
 
+import com.github.slugify.Slugify;
 import com.myfitnessapp.training.controller.dto.TrainingDto;
 import com.myfitnessapp.training.model.Training;
 import com.myfitnessapp.training.service.TrainingService;
@@ -36,6 +37,7 @@ public class TrainingController {
                         .categoryId(trainingDto.getCategoryId())
                         .content(trainingDto.getContent())
                         .level(trainingDto.getLevel())
+                        .slug(slugifySlug(trainingDto.getSlug()))
                 .build());
     }
 
@@ -46,5 +48,11 @@ public class TrainingController {
             @Length(max = 255)
             String slug) {
         return trainingService.getTrainingBySlug(slug);
+    }
+
+    private String slugifySlug(String slug) {
+        Slugify slugify = new Slugify();
+        return slugify.withCustomReplacement("_", "-")
+                .slugify(slug);
     }
 }
