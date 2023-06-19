@@ -1,7 +1,6 @@
-package com.myfitnessapp.training.model;
+package com.myfitnessapp.common.model;
 
 
-import com.myfitnessapp.review.model.Review;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

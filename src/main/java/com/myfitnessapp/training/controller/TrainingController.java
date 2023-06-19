@@ -3,8 +3,8 @@ package com.myfitnessapp.training.controller;
 
 import com.github.slugify.Slugify;
 import com.myfitnessapp.training.controller.dto.TrainingDto;
-import com.myfitnessapp.training.controller.dto.TrainingListDto;
-import com.myfitnessapp.training.model.Training;
+import com.myfitnessapp.common.model.dto.TrainingListDto;
+import com.myfitnessapp.common.model.Training;
 import com.myfitnessapp.training.service.TrainingService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;

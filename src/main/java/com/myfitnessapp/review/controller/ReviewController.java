@@ -1,7 +1,7 @@
 package com.myfitnessapp.review.controller;
 
 import com.myfitnessapp.review.controller.dto.ReviewDto;
-import com.myfitnessapp.review.model.Review;
+import com.myfitnessapp.common.model.Review;
 import com.myfitnessapp.review.service.ReviewService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

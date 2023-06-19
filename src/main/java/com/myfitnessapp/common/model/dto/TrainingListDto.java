@@ -1,4 +1,4 @@
-package com.myfitnessapp.training.controller.dto;
+package com.myfitnessapp.common.model.dto;
 
 
 import lombok.Builder;

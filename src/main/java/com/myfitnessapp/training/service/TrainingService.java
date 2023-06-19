@@ -1,7 +1,7 @@
 package com.myfitnessapp.training.service;
 
-import com.myfitnessapp.training.model.Training;
-import com.myfitnessapp.training.repository.TrainingRepository;
+import com.myfitnessapp.common.model.Training;
+import com.myfitnessapp.common.repository.TrainingRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

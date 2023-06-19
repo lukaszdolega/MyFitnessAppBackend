@@ -1,6 +1,6 @@
-package com.myfitnessapp.training.repository;
+package com.myfitnessapp.common.repository;
 
-import com.myfitnessapp.training.model.Training;
+import com.myfitnessapp.common.model.Training;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

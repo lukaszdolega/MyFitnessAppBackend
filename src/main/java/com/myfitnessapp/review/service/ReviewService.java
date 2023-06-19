@@ -1,6 +1,6 @@
 package com.myfitnessapp.review.service;
 
-import com.myfitnessapp.review.model.Review;
+import com.myfitnessapp.common.model.Review;
 import com.myfitnessapp.review.repository.ReviewRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

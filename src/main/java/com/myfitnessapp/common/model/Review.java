@@ -1,4 +1,4 @@
-package com.myfitnessapp.review.model;
+package com.myfitnessapp.common.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

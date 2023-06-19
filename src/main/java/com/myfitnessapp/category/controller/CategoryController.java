@@ -1,7 +1,7 @@
 package com.myfitnessapp.category.controller;
 
-import com.myfitnessapp.category.model.Category;
-import com.myfitnessapp.category.model.CategoryTrainingDto;
+import com.myfitnessapp.common.model.Category;
+import com.myfitnessapp.category.dto.CategoryTrainingDto;
 import com.myfitnessapp.category.service.CategoryService;
 import jakarta.validation.constraints.Pattern;
 import lombok.RequiredArgsConstructor;
