@@ -28,8 +28,4 @@ public class Training {
     private String content;
     private String level;
     private String slug;
-    @OneToMany
-    @JoinColumn(name = "trainingId")
-    private List<Review> reviews;
-
 }

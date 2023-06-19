@@ -56,7 +56,7 @@ public class TrainingController {
     }
 
     @GetMapping("/trainings/{slug}")
-    public Training getTrainingBySlug(
+    public TrainingDto getTrainingBySlug(
             @PathVariable
             @Pattern(regexp = "[a-z0-9\\-]+")
             @Length(max = 255)

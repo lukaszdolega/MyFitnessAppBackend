@@ -1,20 +1,16 @@
-package com.myfitnessapp.common.model;
+package com.myfitnessapp.admin.review.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
+import jakarta.persistence.Table;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 @Entity
+@Table(name = "review")
 @Getter
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class Review {
+public class AdminReview {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
