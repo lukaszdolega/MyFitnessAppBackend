@@ -3,6 +3,7 @@ package com.myfitnessapp.transformation.controller;
 import com.myfitnessapp.transformation.controller.dto.TransformationDto;
 import com.myfitnessapp.transformation.model.Transformation;
 import com.myfitnessapp.transformation.service.TransformationService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -11,8 +12,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Locale;
 
 @RestController
 @RequiredArgsConstructor
@@ -31,7 +30,7 @@ public class TransformationController {
     }
 
     @PostMapping("/transformations")
-    public Transformation createTransformation(@RequestBody TransformationDto transformationDto) {
+    public Transformation createTransformation(@RequestBody @Valid TransformationDto transformationDto) {
         return transformationService.createTransformation(mapTransformation(transformationDto));
     }
 
