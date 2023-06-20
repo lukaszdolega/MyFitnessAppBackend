@@ -18,4 +18,12 @@ public class TransformationService {
     public Page<Transformation> getTransformations(Pageable pageable) {
        return transformationRepository.findAll(pageable);
     }
+
+    public Transformation getTransformation(Long id) {
+        return transformationRepository.findById(id).orElseThrow();
+    }
+
+    public Transformation createTransformation(Transformation transformation) {
+        return transformationRepository.save(transformation);
+    }
 }
