@@ -21,7 +21,7 @@ public class TransformationController {
     private final TransformationService transformationService;
 
     @GetMapping("/transformations")
-    public List<Transformation> getTransformations() {
-        return transformationService.getTransformations();
+    public Page<Transformation> getTransformations(Pageable pageable) {
+        return transformationService.getTransformations(pageable);
     }
 }
