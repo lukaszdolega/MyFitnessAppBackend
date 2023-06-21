@@ -16,11 +16,7 @@ public class TransformationDto {
     @NotNull
     @Min(1)
     private int weightAfter;
-    @NotBlank
-    @Length(min = 4)
     private String imageBefore;
-    @NotBlank
-    @Length(min = 4)
     private String imageAfter;
     @NotNull
     @Min(1)
