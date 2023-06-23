@@ -23,6 +23,7 @@ public class ReviewController {
                 .authorName(cleanContent(reviewDto.authorName()))
                 .content(cleanContent(reviewDto.content()))
                 .trainingId(reviewDto.trainingId())
+                .moderated(reviewDto.moderated())
                 .build());
     }
 
