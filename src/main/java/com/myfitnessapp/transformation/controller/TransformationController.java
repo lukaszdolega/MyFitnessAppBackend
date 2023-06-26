@@ -5,7 +5,6 @@ import com.myfitnessapp.transformation.controller.dto.UploadResponse;
 import com.myfitnessapp.transformation.model.Transformation;
 import com.myfitnessapp.transformation.service.ImageService;
 import com.myfitnessapp.transformation.service.TransformationService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
@@ -20,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.Valid;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;

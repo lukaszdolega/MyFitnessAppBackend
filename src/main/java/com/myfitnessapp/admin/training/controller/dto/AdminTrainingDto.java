@@ -1,9 +1,11 @@
 package com.myfitnessapp.admin.training.controller.dto;
 
-import jakarta.validation.constraints.NotNull;
-import org.hibernate.validator.constraints.Length;
-import jakarta.validation.constraints.NotBlank;
+
 import lombok.Getter;
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Getter
 public class AdminTrainingDto {

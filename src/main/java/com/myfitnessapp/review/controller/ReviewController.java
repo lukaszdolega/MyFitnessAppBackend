@@ -1,15 +1,17 @@
 package com.myfitnessapp.review.controller;
 
-import com.myfitnessapp.review.controller.dto.ReviewDto;
 import com.myfitnessapp.common.model.Review;
+import com.myfitnessapp.review.controller.dto.ReviewDto;
 import com.myfitnessapp.review.service.ReviewService;
-import jakarta.validation.Valid;
+
 import lombok.RequiredArgsConstructor;
 import org.jsoup.Jsoup;
 import org.jsoup.safety.Safelist;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
 
 @RestController
 @RequiredArgsConstructor

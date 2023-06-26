@@ -1,9 +1,9 @@
 package com.myfitnessapp.category.controller;
 
-import com.myfitnessapp.common.model.Category;
 import com.myfitnessapp.category.dto.CategoryTrainingDto;
 import com.myfitnessapp.category.service.CategoryService;
-import jakarta.validation.constraints.Pattern;
+import com.myfitnessapp.common.model.Category;
+
 import lombok.RequiredArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.data.domain.Pageable;
@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.constraints.Pattern;
 import java.util.List;
 
 @RestController

@@ -1,10 +1,10 @@
 package com.myfitnessapp.category.service;
 
-import com.myfitnessapp.common.model.Category;
 import com.myfitnessapp.category.dto.CategoryTrainingDto;
 import com.myfitnessapp.category.repository.CategoryRepository;
-import com.myfitnessapp.common.model.dto.TrainingListDto;
+import com.myfitnessapp.common.model.Category;
 import com.myfitnessapp.common.model.Training;
+import com.myfitnessapp.common.model.dto.TrainingListDto;
 import com.myfitnessapp.common.repository.TrainingRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

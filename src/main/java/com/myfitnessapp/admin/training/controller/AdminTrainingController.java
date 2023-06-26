@@ -4,7 +4,6 @@ import com.github.slugify.Slugify;
 import com.myfitnessapp.admin.training.controller.dto.AdminTrainingDto;
 import com.myfitnessapp.admin.training.model.AdminTraining;
 import com.myfitnessapp.admin.training.service.AdminTrainingService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -15,6 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
 
 @RestController
 @RequiredArgsConstructor

@@ -2,12 +2,10 @@ package com.myfitnessapp.training.controller;
 
 
 import com.github.slugify.Slugify;
-import com.myfitnessapp.training.controller.dto.TrainingDto;
-import com.myfitnessapp.common.model.dto.TrainingListDto;
 import com.myfitnessapp.common.model.Training;
+import com.myfitnessapp.common.model.dto.TrainingListDto;
+import com.myfitnessapp.training.controller.dto.TrainingDto;
 import com.myfitnessapp.training.service.TrainingService;
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.Pattern;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.data.domain.Page;
@@ -20,6 +18,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+import javax.validation.constraints.Pattern;
 import java.util.List;
 
 @RestController
