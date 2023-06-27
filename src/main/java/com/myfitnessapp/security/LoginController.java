@@ -2,6 +2,7 @@ package com.myfitnessapp.security;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.myfitnessapp.security.exception.RegisterException;
 import com.myfitnessapp.security.model.AppUserDetails;
 import com.myfitnessapp.security.model.User;
 import com.myfitnessapp.security.model.UserRole;
@@ -12,7 +13,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -51,10 +51,11 @@ public class LoginController {
     @PostMapping("/register")
     public Token register(@RequestBody @Valid RegisterCredentials registerCredentials) {
         if (!registerCredentials.getPassword().equals(registerCredentials.getRepeatPassword())) {
-            throw new IllegalArgumentException("Hasła nie są identyczne");
+            throw new RegisterException("Passwords must be the same") {
+            };
         }
         if (userRepository.existsByUsername(registerCredentials.getUsername())) {
-            throw new IllegalArgumentException("Taki uźytkownik już istnieje w bazie danych");
+            throw new RegisterException("This username is already taken");
         }
         userRepository.save(User.builder()
                 .username(registerCredentials.getUsername())
