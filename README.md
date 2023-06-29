@@ -9,8 +9,8 @@ https://www.youtube.com/watch?v=HHqug-utwFI
 https://my-fitness-app-frontend-15ee72b9447f.herokuapp.com/home
 
 ## Admin panel
-username: admin
-password: test
+username: admin\
+password: test\
 https://my-fitness-app-frontend-15ee72b9447f.herokuapp.com/admin
 
 ## MyFitnessApp is built using the following technologies and frameworks:
