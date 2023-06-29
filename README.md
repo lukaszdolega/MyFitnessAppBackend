@@ -1,6 +1,18 @@
 # MyFitnessApp
 MyFitnessApp is a web application designed to help users with their fitness training. It provides various features such as training management, transformations tracking, and a chat interface powered by AI.
 
+# Overview
+## Youtube
+https://www.youtube.com/watch?v=HHqug-utwFI
+
+## Heroku
+https://my-fitness-app-frontend-15ee72b9447f.herokuapp.com/home
+
+## Admin panel
+username: admin
+password: test
+https://my-fitness-app-frontend-15ee72b9447f.herokuapp.com/admin
+
 ## MyFitnessApp is built using the following technologies and frameworks:
 
 - Java
